@@ -1,11 +1,17 @@
 package GeSoc.Clave;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ValidadorClave
 {
 	private List<CriterioValidacion> criteriosValidacion;
+	
+	public ValidadorClave()
+	{
+		criteriosValidacion = new ArrayList<CriterioValidacion>();
+	}
 	
 	public Boolean EsValida(String clave)
 	{
