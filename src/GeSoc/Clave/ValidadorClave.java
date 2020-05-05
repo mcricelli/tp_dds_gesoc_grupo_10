@@ -15,15 +15,15 @@ public class ValidadorClave
 	
 	public Boolean EsValida(String clave)
 	{
-		return criteriosValidacion.stream().allMatch( criterio -> criterio.EsValida(clave));
+		return !criteriosValidacion.isEmpty() ? criteriosValidacion.stream().allMatch( criterio -> criterio.EsValida(clave)) : true;
 	}
 	
 	public List<String> ObtenerMotivosInvalidez(String clave)
 	{
-		return criteriosValidacion.stream().filter(criterio -> !criterio.EsValida(clave))
+		return !criteriosValidacion.isEmpty() ? criteriosValidacion.stream().filter(criterio -> !criterio.EsValida(clave))
 				.map(criterio -> criterio.obtenerMotivosInvalidez(clave)).
 				flatMap(motivosPorCriterio -> motivosPorCriterio.stream())
-				.collect(Collectors.toList());
+				.collect(Collectors.toList()) : new ArrayList<String>();
 	}
 	
 	public void AgregarCriterio(CriterioValidacion criterioValidacion)

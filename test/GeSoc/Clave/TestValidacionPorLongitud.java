@@ -12,13 +12,10 @@ public class TestValidacionPorLongitud{
 	private String contrasenia;
 	private ValidadorClave validador;
 	
-	
-	
 	@Before
 	public void init() {
 		validador = new ValidadorClave();
 		validador.AgregarCriterio(new ValidacionPorLongitud(8,64));
-		
 	}
 	
 	public String getContrasenia() {
@@ -29,12 +26,10 @@ public class TestValidacionPorLongitud{
 		this.contrasenia = clave;
 	}
 	
-
 	@Test
 	public void noDeAceptarClaveMenorAOcho() {
 		this.generarClave("hola");
 		Assert.assertFalse(validador.EsValida(contrasenia));
-        
 	}
 	
 	@Test

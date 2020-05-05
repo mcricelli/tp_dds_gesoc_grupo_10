@@ -8,9 +8,9 @@ import GeSoc.Clave.CriterioValidacion;
 
 public class ValidacionPorComplejidad implements CriterioValidacion {
 	
-	private String mensajeUsarNumeros = "La clave debe tener al menos un número.";
+	private String mensajeUsarNumeros = "La clave debe tener al menos un numero.";
 	
-	private String mensajeUsarMayuscula = "La clave debe tener al menos una mayúscula.";
+	private String mensajeUsarMayuscula = "La clave debe tener al menos una mayuscula.";
 
 	private String mensajeUsarCaracterEspecial = "La clave debe tener al menos un caracter especial (!@#$%^&*()+-=[]{};':\"|,.<>/?).";
 

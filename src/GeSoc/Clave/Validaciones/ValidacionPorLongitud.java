@@ -9,7 +9,7 @@ public class ValidacionPorLongitud implements CriterioValidacion {
 	public int minimo = 8;
 	public int maximo = 64;
 	private String errorMinimo = "El minimo de caracteres permitidos es: ";
-	private String errorMaximo = " El maximo de caracteres permitidos es: ";
+	private String errorMaximo = "El maximo de caracteres permitidos es: ";
 	
 	public ValidacionPorLongitud(int rangoMinimo,int rangoMaximo) {
 		this.minimo = rangoMinimo;
