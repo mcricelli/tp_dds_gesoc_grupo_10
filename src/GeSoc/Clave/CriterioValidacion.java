@@ -1,8 +1,10 @@
 package GeSoc.Clave;
 
+import java.util.List;
+
 public interface CriterioValidacion {
 	
 	Boolean EsValida(String clave);
 	
-	String ObtenerMotivoInvalidez(String clave);
+	List<String> obtenerMotivosInvalidez(String clave);
 }

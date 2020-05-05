@@ -1,5 +1,9 @@
 package GeSoc.Clave.Validaciones;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import GeSoc.Clave.CriterioValidacion;
 
 public class ValidacionPorComplejidad implements CriterioValidacion {
@@ -18,18 +22,17 @@ public class ValidacionPorComplejidad implements CriterioValidacion {
 	}
 
 	@Override
-	public String ObtenerMotivoInvalidez(String clave)
+	public List<String> obtenerMotivosInvalidez(String clave)
 	{
-		// TODO: la interfaz deberia soportar un List<String> en vez de solo String para este metodo.
-		String motivo = "";
+		List<String> motivos = new ArrayList<String>();
 		
-		if (!TieneNumero(clave)) motivo += mensajeUsarNumeros;
+		if (!TieneNumero(clave)) motivos.add(mensajeUsarNumeros);
 		
-		if (!TieneMayuscula(clave)) motivo += mensajeUsarMayuscula;
+		if (!TieneMayuscula(clave)) motivos.add(mensajeUsarMayuscula);
 		
-		if (!TieneCaracterEspecial(clave)) motivo += mensajeUsarCaracterEspecial;
+		if (!TieneCaracterEspecial(clave)) motivos.add(mensajeUsarCaracterEspecial);
 		
-		return motivo;
+		return motivos;
 	}
 	
 	private Boolean TieneNumero(String clave)
