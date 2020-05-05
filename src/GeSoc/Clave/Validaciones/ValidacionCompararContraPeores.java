@@ -2,6 +2,9 @@ package GeSoc.Clave.Validaciones;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 import GeSoc.Clave.CriterioValidacion;
@@ -34,8 +37,8 @@ public class ValidacionCompararContraPeores implements CriterioValidacion {
 	}
 
 	@Override
-	public String ObtenerMotivoInvalidez(String clave) {
-		return motivoInvalidez;
+	public List<String> obtenerMotivosInvalidez(String clave) {
+		return Arrays.asList(motivoInvalidez);
 	}
 
 }

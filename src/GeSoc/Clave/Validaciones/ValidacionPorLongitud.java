@@ -1,5 +1,8 @@
 package GeSoc.Clave.Validaciones;
 
+import java.util.Arrays;
+import java.util.List;
+
 import GeSoc.Clave.CriterioValidacion;
 
 public class ValidacionPorLongitud implements CriterioValidacion {
@@ -18,11 +21,11 @@ public class ValidacionPorLongitud implements CriterioValidacion {
 	}
 	
 	@Override
-	public String ObtenerMotivoInvalidez(String clave) {
+	public List<String> obtenerMotivosInvalidez(String clave) {
 		if(clave.length()<minimo) {
-			return errorMinimo+minimo;
+			return Arrays.asList(errorMinimo+minimo);
 		}else {
-			return errorMaximo+maximo;
+			return Arrays.asList(errorMaximo+maximo);
 		}
 	}
 	
