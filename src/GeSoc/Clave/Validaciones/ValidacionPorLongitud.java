@@ -26,7 +26,7 @@ public class ValidacionPorLongitud implements CriterioValidacion {
 	}
 	
 	@Override
-	public List<String> obtenerMotivosInvalidez(String clave) {
+	public List<String> ObtenerMotivosInvalidez(String clave) {
 		if(clave.length()<minimo) {
 			return Arrays.asList(errorMinimo+minimo);
 		}else {

@@ -6,5 +6,5 @@ public interface CriterioValidacion {
 	
 	Boolean EsValida(String clave);
 	
-	List<String> obtenerMotivosInvalidez(String clave);
+	List<String> ObtenerMotivosInvalidez(String clave);
 }

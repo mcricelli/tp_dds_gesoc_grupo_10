@@ -37,7 +37,7 @@ public class ValidacionCompararContraPeores implements CriterioValidacion {
 	}
 
 	@Override
-	public List<String> obtenerMotivosInvalidez(String clave) {
+	public List<String> ObtenerMotivosInvalidez(String clave) {
 		return Arrays.asList(motivoInvalidez);
 	}
 

@@ -22,7 +22,7 @@ public class ValidacionPorComplejidad implements CriterioValidacion {
 	}
 
 	@Override
-	public List<String> obtenerMotivosInvalidez(String clave)
+	public List<String> ObtenerMotivosInvalidez(String clave)
 	{
 		List<String> motivos = new ArrayList<String>();
 		

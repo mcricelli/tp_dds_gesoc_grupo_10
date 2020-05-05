@@ -54,7 +54,7 @@ public class TestValidacionPorComplejidad {
 	@Test
 	public void ValidacionPorComplejidadRetornaMensajesInvalidezConClaveSinNumerosNiCaracteresEspecialesNiMayusculas() {
 		clave = "clave";
-		List<String> mensajesInvalidez = validacion.obtenerMotivosInvalidez(clave);
+		List<String> mensajesInvalidez = validacion.ObtenerMotivosInvalidez(clave);
 		Assert.assertTrue(
 				mensajesInvalidez.contains(mensajeUsarNumeros)
 				&& mensajesInvalidez.contains(mensajeUsarCaracterEspecial)
@@ -65,7 +65,7 @@ public class TestValidacionPorComplejidad {
 	@Test
 	public void ValidacionPorComplejidadRetornaMensajesInvalidezConClaveSinNumerosNiCaracteresEspeciales() {
 		clave = "Clave";
-		List<String> mensajesInvalidez = validacion.obtenerMotivosInvalidez(clave);
+		List<String> mensajesInvalidez = validacion.ObtenerMotivosInvalidez(clave);
 		Assert.assertTrue(
 				mensajesInvalidez.contains(mensajeUsarNumeros)
 				&& mensajesInvalidez.contains(mensajeUsarCaracterEspecial)
@@ -75,7 +75,7 @@ public class TestValidacionPorComplejidad {
 	@Test
 	public void ValidacionPorComplejidadRetornaMensajesInvalidezConClaveSinNumeros() {
 		clave = "Clave!";
-		List<String> mensajesInvalidez = validacion.obtenerMotivosInvalidez(clave);
+		List<String> mensajesInvalidez = validacion.ObtenerMotivosInvalidez(clave);
 		Assert.assertTrue(
 				mensajesInvalidez.contains(mensajeUsarNumeros)
 			);

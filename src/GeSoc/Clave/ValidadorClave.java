@@ -21,7 +21,7 @@ public class ValidadorClave
 	public List<String> ObtenerMotivosInvalidez(String clave)
 	{
 		return !criteriosValidacion.isEmpty() ? criteriosValidacion.stream().filter(criterio -> !criterio.EsValida(clave))
-				.map(criterio -> criterio.obtenerMotivosInvalidez(clave)).
+				.map(criterio -> criterio.ObtenerMotivosInvalidez(clave)).
 				flatMap(motivosPorCriterio -> motivosPorCriterio.stream())
 				.collect(Collectors.toList()) : new ArrayList<String>();
 	}
