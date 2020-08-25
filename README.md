@@ -3,8 +3,6 @@
 ## Trabajo práctico de diseño de sistemas cursada 2020
 
 ### Integrantes
-- José Martinez
-- Leonel Santamaría
 - Marco Andrés Castillo
 
 [Consigna](https://www.campusvirtual.frba.utn.edu.ar/especialidad/pluginfile.php/218810/mod_resource/content/1/TP%20DDS%202020.pdf)
